@@ -1,0 +1,26 @@
+CREATE TABLE `itens_notas_fiscais2` (
+  `NUMERO` int NOT NULL,
+  `CODIGO_DO_PRODUTO` varchar(10) NOT NULL,
+  `QUANTIDADE` int NOT NULL,
+  `PRECO` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `notas_fiscais2` (
+  `CPF` varchar(11) NOT NULL,
+  `MATRICULA` varchar(5) NOT NULL,
+  `DATA_VENDA` date DEFAULT NULL,
+  `NUMERO` int NOT NULL,
+  `IMPOSTO` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `tabela_de_produtos2` (
+  `CODIGO_DO_PRODUTO` varchar(10) NOT NULL,
+  `NOME_DO_PRODUTO` varchar(50) DEFAULT NULL,
+  `EMBALAGEM` varchar(20) DEFAULT NULL,
+  `TAMANHO` varchar(10) DEFAULT NULL,
+  `SABOR` varchar(20) DEFAULT NULL,
+  `PRECO_DE_LISTA` float NOT NULL
+  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+

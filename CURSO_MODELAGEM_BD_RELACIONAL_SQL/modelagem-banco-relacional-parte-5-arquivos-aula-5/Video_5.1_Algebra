@@ -1,0 +1,5 @@
+FUNC_MULHERES = σ Sexo == 'F' (funcionario)
+FUNC_NOMES = π Primeiro_Nome, Ultimo_Nome, Cpf (FUNC_MULHERES)
+FUNC_DEPENDENTES = FUNC_NOMES * dependente
+DEPENDENTE_PARTICULAR = σ Cpf == Cpf_Funcionario (FUNC_DEPENDENTES)
+RESULTADO = π Primeiro_Nome, Ultimo_Nome, Nome_Dependente (DEPENDENTE_PARTICULAR)

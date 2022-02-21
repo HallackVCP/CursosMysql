@@ -1,0 +1,10 @@
+SELECT * FROM mysql.user;
+
+SHOW GRANTS FOR 'user02'@'localhost';
+
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user02'@'localhost';
+
+GRANT SELECT, UPDATE, DELETE, INSERT, CREATE TEMPORARY TABLES, EXECUTE, LOCK TABLES
+ON *.* TO 'user02'@'localhost';
+
+GRANT SELECT, UPDATE, DELETE, INSERT ON sucos_vendas.* TO 'user02'@'localhost';

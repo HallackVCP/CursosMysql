@@ -1,0 +1,31 @@
+CREATE USER 'admin02'@'localhost' IDENTIFIED BY '12345';
+GRANT ALL PRIVILEGES ON *.* TO 'admin02'@'localhost' WITH GRANT OPTION;
+
+DROP USER 'root'@'localhost';
+
+CREATE USER 'user02'@'localhost' IDENTIFIED BY '12345';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE temporary tables, LOCK TABLES, EXECUTE 
+ON *.* TO 'user02'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'read02'@'localhost' IDENTIFIED BY '12345';
+
+GRANT SELECT, EXECUTE ON *.* TO 'read02'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'back02'@'localhost' IDENTIFIED BY '12345';
+GRANT SELECT, RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'back02'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'admingeneric02'@'%' IDENTIFIED BY '12345';
+GRANT ALL PRIVILEGES ON *.* TO 'admingeneric02'@'%' WITH GRANT OPTION;
+
+CREATE USER 'user04'@'%' IDENTIFIED BY '12345';
+
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE
+ON sucos_vendas.* TO 'user04'@'%';
+
+CREATE USER 'user05'@'%' IDENTIFIED BY '12345';
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON sucos_vendas.tabela_de_clientes TO 'user05'@'%';
+
+GRANT SELECT ON sucos_vendas.tabela_de_produtos TO 'user05'@'%';
+
+

@@ -1,0 +1,15 @@
+USE vendas_sucos;
+
+SELECT * FROM produtos;
+
+UPDATE produtos SET PRECO_LISTA = 5 WHERE CODIGO = 1000889;
+
+UPDATE produtos SET EMBALAGEM = 'PET', TAMANHO = '1 Litro', DESCRITOR = 
+'Sabor da Montanha - 1 Litro - Uva' WHERE CODIGO = '1000889';
+
+UPDATE produtos SET PRECO_LISTA  = PRECO_LISTA * 1.10 WHERE SABOR = 'Maracujá';
+SELECT * FROM produtos WHERE SABOR = 'Maracujá';
+
+UPDATE CLIENTES SET ENDERECO = 'R. Jorge Emilio 23', BAIRRO = 'Santo Amaro',
+CIDADE = 'São Paulo', ESTADO = 'SP', CEP = '8833223' WHERE CPF = '19290992743';
+SELECT * FROM clientes WHERE CPF = '19290992743';
